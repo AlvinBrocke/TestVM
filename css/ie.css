@@ -1,0 +1,6 @@
+.project_pics ul>li a:hover .zoom{
+	display: block;
+}
+.project_pics ul>li a .zoom{
+	display: none;
+}

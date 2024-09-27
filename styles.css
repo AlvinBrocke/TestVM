@@ -1,0 +1,184 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #f39c12;
+    transform: translateY(-3px);
+}
+
+#hero {
+    background: url('https://example.com/motorcycle-hero.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    animation: fadeIn 3s ease-in;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    animation: fadeIn 4s ease-in;
+}
+
+#learn-more {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+#learn-more:hover {
+    background-color: #d35400;
+    transform: scale(1.1);
+}
+
+.moving-motorcycle {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background: url('https://example.com/motorcycle-icon.png') no-repeat center center / contain;
+    opacity: 0.8;
+}
+
+#motorcycle1 {
+    top: 80%;
+    left: -120px;
+    animation: moveRight 20s linear infinite;
+}
+
+#motorcycle2 {
+    top: 50%;
+    left: -120px;
+    animation: moveRight 25s linear infinite;
+}
+
+@keyframes moveRight {
+    0% { left: -120px; }
+    100% { left: 120%; }
+}
+
+#gallery {
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.motorcycle-card {
+    background-color: #333;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: center;
+    cursor: pointer;
+    max-width: 300px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.motorcycle-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(243, 156, 18, 0.7);
+    background-color: #444;
+}
+
+.motorcycle-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.motorcycle-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.card-info {
+    margin-top: 0.5rem;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.9);
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #gallery {
+        padding: 1rem;
+    }
+
+    .motorcycle-card {
+        margin: 0.5rem;
+        max-width: 100%;
+    }
+}
